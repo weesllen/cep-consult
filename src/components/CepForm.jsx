@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 {/* Estilização do formulario */}
 import './CepForm.css'
+
+ {/*  Integrantes:
+       Maielle Cristina Cunha Lopes - 12724130489 
+       Wesllen dos Santos Correia - 12724148801  
+       Gabriel de Santana Coimbra Pereira - 12724145259  
+       Alisson da Silva Lopes - 12723211997  
+       Esdras Alves de Andrade Silva - 1272320690 */}
 
 const CepForm = () => {
   
@@ -16,6 +23,10 @@ const CepForm = () => {
             district: ''
           })
     
+    useEffect(() => {
+    document.title = 'Projeto A3 Unifacs';
+  }, []); 
+          
     {/* função assicrona que procura o cep */}
     const searchZipCode = async (e) => {
       e.preventDefault();
